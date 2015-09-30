@@ -18,6 +18,31 @@ Status List_Init(Listp L)
 
 }
 
+Status List_creat(Listp L,int arr[],int n){
+
+    Status s=succeed;
+    ListNodeP p,q=(*L);
+    int i =n-1;
+    while(i>=0){
+        p=(ListNodeP)malloc(sizeof(ListNode));
+        if(!p){
+            s=failt;
+            break;
+        }
+        p->data=arr[i];
+
+            p->next=q->next;
+            q->next=p;
+
+        i--;
+
+    }
+
+    return s;
+
+
+}
+
 
 Status List_Retrieve(Listp L,int pos,int * data){
     Status s=range_err;

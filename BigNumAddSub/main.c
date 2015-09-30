@@ -1,7 +1,7 @@
 ﻿#include <stdio.h>
 #include <stdlib.h>
 #include "list.h"
-
+#include"test.h"
 /*
 
     超大数据加减法运算程序
@@ -15,8 +15,28 @@
 int isNum(char ch);
 Listp addTwoBigNum(Listp A,Listp B);
 Listp subTwoBigNum(Listp A,Listp B);
+
+
+
 int main(void)
 {
+    /*
+
+    超大数据计算测试
+    测试:
+            1.加法
+                零和正数
+                零和零
+            2.减法
+                零和正数
+                零和零
+
+    无法使用负数参与计算
+
+
+
+
+
 
 
     int fun=0;
@@ -60,11 +80,14 @@ int main(void)
         printf("您输入的运算符暂不支持");
     }
 
+*/
 
-
+    test();//测试链表函数
 
     return 0;
 }
+
+
 
 
 int isNum(char ch){
