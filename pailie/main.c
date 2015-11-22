@@ -4,10 +4,21 @@ void sortAll(int arr[],int n,int k);
 int main(void)
 {
 
-    int arr[]={1,2,3,4,5,6,7,8,9};
-    sortAll(arr,9,0);
+    int n=0;
+    printf("输出n:");
+    scanf("%d",&n);
+
+    int* arr=malloc(sizeof(int)*n);
+    for(int i =0;i<n;i++){
+        arr[i]=i+1;
+        printf("%d",i+1);
+    }
+
+
+    sortAll(arr,n,0);
     return 0;
 }
+
 
 
 
@@ -28,10 +39,10 @@ void sortAll(int arr[],int n,int k){
         arr[i]=arr[k];
         arr[k]=temp;
         sortAll(arr,n,k+1);
+
         temp=arr[i];
         arr[i]=arr[k];
         arr[k]=temp;
-
 
         }
 
